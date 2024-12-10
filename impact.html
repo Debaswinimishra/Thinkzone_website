@@ -262,16 +262,27 @@
       style="text-align: center; font-family: Arial, sans-serif; margin: 40px"
     >
       <!-- Title -->
-      <h2 class="text-primary mb-4">
+      <h2
+        class="text-primary mb-4"
+        style="font-size: 2rem; margin-bottom: 20px"
+      >
         <b>Independent Impact Evaluation (2021-22)</b>
       </h2>
 
       <!-- Subtitle -->
-      <p style="font-size: 1rem; color: #707070; margin-bottom: 40px">
+      <p
+        style="
+          font-size: 1rem;
+          color: #707070;
+          margin-bottom: 40px;
+          line-height: 1.5;
+        "
+      >
         There has been a significant causal impact of the ThinkZone program on
         <br />
         Mathematics and Odia (language) scores
       </p>
+
       <!-- Circle Charts -->
       <div
         style="
@@ -279,6 +290,8 @@
           justify-content: center;
           gap: 60px;
           margin-bottom: 40px;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
         "
       >
         <!-- Maths Donut Chart -->
@@ -327,6 +340,7 @@
             </p>
           </div>
         </div>
+
         <!-- Odia Donut Chart -->
         <div
           style="
@@ -374,6 +388,7 @@
           </div>
         </div>
       </div>
+
       <!-- Source -->
       <div
         style="
@@ -390,6 +405,42 @@
         Jindal School of Government & Public Policy
       </div>
     </div>
+
+    <!-- Inline Mobile Responsiveness -->
+    <script>
+      if (window.innerWidth <= 768) {
+        document.querySelector("h2").style.fontSize = "1.5rem";
+        document.querySelector("p").style.fontSize = "0.9rem";
+        document.querySelector("p").style.lineHeight = "1.4";
+        document.querySelector(".text-primary").style.fontSize = "1.2rem";
+        document.querySelector(".text-primary b").style.fontSize = "1.3rem";
+        document.querySelector(".flex").style.flexDirection = "column";
+        document.querySelector(".flex").style.gap = "20px";
+        document.querySelector(".circle-container").style.width = "80%";
+        document.querySelector(".circle-container").style.flexWrap = "wrap";
+        document.querySelector(".circle-container").style.justifyContent =
+          "space-evenly";
+      }
+
+      if (window.innerWidth <= 480) {
+        document.querySelector("h2").style.fontSize = "1.3rem";
+        document.querySelector("p").style.fontSize = "0.8rem";
+        document.querySelector(".text-primary b").style.fontSize = "1rem";
+        document.querySelector(".circle-container").style.width = "100%";
+        document.querySelector(".circle-container").style.flexDirection =
+          "column";
+        document.querySelector(".circle-container").style.gap = "30px";
+        document
+          .querySelectorAll(".circle-container div")
+          .forEach(function (div) {
+            div.style.width = "180px";
+            div.style.height = "180px";
+          });
+        document.querySelector(".source").style.fontSize = "0.8rem";
+        document.querySelector(".source").style.padding = "8px 10px";
+      }
+    </script>
+
     <br />
     <br />
 
